@@ -4,28 +4,32 @@ import { useState } from "react";
 
 const indexDB = {
     Indian : [
-    { name: "Nifty", companies: "30" },
-    { name: "Sensex", companies: "50" }
+    { name: "Nifty", companies: "30",price: "17000++" },
+    { name: "Sensex", companies: "50",price: "60000+" }
   ],
 
   Asian: [
     {
       name: "NIKKEI",
-      companies: "225"
+      companies: "225",
+      price: "22000"
     },
     {
       name: "SGX NIFTy",
-      companies: "50"
+      companies: "80",
+      price: "$6000"
     }
   ],
   world: [
     {
       name: "DAX",
-      companies: "40"
+      companies: "40",
+      price: "6000"
     },
     {
       name: "NASDAQ",
-    companies: "79"
+    companies: "79",
+    price: "70000"
     }
   ]
 };
@@ -40,7 +44,7 @@ export default function App() {
       <h1>  📉 Stock Indexes </h1>
       <p style={{ fontSize: "smaller" }}>
         {" "}
-        Checkout my favorite books. Select a genre to get started{" "}
+      Index where we get bundel of stocks{" "}
       </p>
 
       <div>
@@ -49,7 +53,7 @@ export default function App() {
             onClick={() => genreClickHandler(genre)}
             style={{
               cursor: "pointer",
-              background: "#E5E7EB",
+              background: "#3357d0",
               borderRadius: "0.5rem",
               padding: "0.5rem  1rem",
               border: "1px solid black",
@@ -77,11 +81,15 @@ export default function App() {
             >
               {" "}
               <div style={{ fontSize: "larger" }}> {stock.name} </div>
+             
               <div style={{ fontSize: "smaller" }}> {stock.companies} </div>
+              <div style={{ fontSize: "smaller" }}> {stock.price} </div>
             </li>
           ))}
         </ul>
       </div>
+
+      <h3> Made up with 💓 by omaa</h3>
     </div>
   );
 }
